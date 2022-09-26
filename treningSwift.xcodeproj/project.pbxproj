@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15AFED0E28E23EEA0022E4E7 /* RootTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AFED0D28E23EEA0022E4E7 /* RootTabController.swift */; };
 		15CAF74528DA1080008D8E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAF74428DA1080008D8E2B /* AppDelegate.swift */; };
 		15CAF74728DA1080008D8E2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAF74628DA1080008D8E2B /* SceneDelegate.swift */; };
 		15CAF74928DA1080008D8E2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAF74828DA1080008D8E2B /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15AFED0D28E23EEA0022E4E7 /* RootTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabController.swift; sourceTree = "<group>"; };
 		15CAF74128DA1080008D8E2B /* treningSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = treningSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15CAF74428DA1080008D8E2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15CAF74628DA1080008D8E2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15AFED0A28E23EB30022E4E7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		15AFED0B28E23EC40022E4E7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				15AFED0D28E23EEA0022E4E7 /* RootTabController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		15AFED0C28E23ECE0022E4E7 /* AppData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppData;
+			sourceTree = "<group>";
+		};
 		15CAF73828DA1080008D8E2B = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +80,9 @@
 		15CAF74328DA1080008D8E2B /* treningSwift */ = {
 			isa = PBXGroup;
 			children = (
+				15AFED0C28E23ECE0022E4E7 /* AppData */,
+				15AFED0B28E23EC40022E4E7 /* ViewControllers */,
+				15AFED0A28E23EB30022E4E7 /* Views */,
 				15CAF74428DA1080008D8E2B /* AppDelegate.swift */,
 				15CAF74628DA1080008D8E2B /* SceneDelegate.swift */,
 				15CAF74828DA1080008D8E2B /* ViewController.swift */,
@@ -139,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15CAF74928DA1080008D8E2B /* ViewController.swift in Sources */,
+				15AFED0E28E23EEA0022E4E7 /* RootTabController.swift in Sources */,
 				15CAF74528DA1080008D8E2B /* AppDelegate.swift in Sources */,
 				15CAF74728DA1080008D8E2B /* SceneDelegate.swift in Sources */,
 			);
