@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--FirstViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="treningSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="FirstViewController" id="BYZ-38-t0r" customClass="FirstViewController" customModule="treningSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,10 +144,10 @@
             </objects>
             <point key="canvasLocation" x="2178" y="-391"/>
         </scene>
-        <!--Item 2-->
+        <!--SecondViewController-->
         <scene sceneID="DIZ-Gr-DNf">
             <objects>
-                <viewController id="zsU-Yc-BIr" sceneMemberID="viewController">
+                <viewController title="SecondViewController" id="zsU-Yc-BIr" customClass="SecondViewController" customModule="treningSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4me-J0-Npw">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

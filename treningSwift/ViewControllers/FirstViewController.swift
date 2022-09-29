@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FirstViewController: UIViewController {
     @IBOutlet weak var Label: UILabel!
     @IBOutlet weak var ChangeButton: UIButton!
     @IBOutlet weak var changeTexrField: UITextField!
