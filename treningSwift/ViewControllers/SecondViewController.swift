@@ -8,9 +8,13 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+private let manager = CustomDataManager()
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let element = manager.returner()
+        {
+            print(element)
+        }
 
         // Do any additional setup after loading the view.
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1539999028E5EA7200052B2C /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539998F28E5EA7200052B2C /* CustomView.swift */; };
 		15AFED0E28E23EEA0022E4E7 /* RootTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AFED0D28E23EEA0022E4E7 /* RootTabController.swift */; };
 		15AFED1028E245CC0022E4E7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AFED0F28E245CC0022E4E7 /* SecondViewController.swift */; };
 		15AFED1428E2484A0022E4E7 /* CustomControlData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AFED1328E2484A0022E4E7 /* CustomControlData.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1539998F28E5EA7200052B2C /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		15AFED0D28E23EEA0022E4E7 /* RootTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabController.swift; sourceTree = "<group>"; };
 		15AFED0F28E245CC0022E4E7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		15AFED1328E2484A0022E4E7 /* CustomControlData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControlData.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 		15AFED0A28E23EB30022E4E7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1539998F28E5EA7200052B2C /* CustomView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15AFED1628E24BD80022E4E7 /* CustomDataManager.swift in Sources */,
+				1539999028E5EA7200052B2C /* CustomView.swift in Sources */,
 				15CAF74928DA1080008D8E2B /* FirstViewController.swift in Sources */,
 				15AFED1428E2484A0022E4E7 /* CustomControlData.swift in Sources */,
 				15AFED0E28E23EEA0022E4E7 /* RootTabController.swift in Sources */,
