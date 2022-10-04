@@ -8,10 +8,11 @@
 import Foundation
 import UIKit
 struct CustomControlData {
-    let color = UIColor()
+    let color : UIColor
     let text: String
     init(text: String, color:UIColor) {
         self.text = text.uppercased()
+        self.color = color
     }
 }
 

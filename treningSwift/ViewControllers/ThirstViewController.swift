@@ -1,19 +1,24 @@
 //
-//  SecondViewController.swift
+//  ThirstViewController.swift
 //  treningSwift
 //
-//  Created by Игорь Степанов on 26.09.2022.
+//  Created by Игорь Степанов on 05.10.2022.
 //
 
 import UIKit
 
-class SecondViewController: UIViewController {
-    @IBOutlet var customView: CustomView!
-    private let manager = CustomDataManager()
+class ThirstViewController: UIViewController {
+let prime = Finder()
+    let number = prime
+    start { [weak self] (number) in
+    
+    DispatchQueue.main.async { [weak self] in
+    self?.lastPrimeLabel = "\(number)"
+    }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let manag = manager.returner() else{return}
-        customView.setData(data: manag)
 
         // Do any additional setup after loading the view.
     }

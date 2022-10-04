@@ -28,11 +28,13 @@ import UIKit
         let horizontalLabelConstraint = NSLayoutConstraint(item: textLabel, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0)
         let verticalLabelConstraint = NSLayoutConstraint(item: textLabel, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)
         NSLayoutConstraint.activate([horizontalLabelConstraint,verticalLabelConstraint])
+        textLabel.backgroundColor = .clear
     }
     
-    func setData() -> CustomControlData?{
-        textLabel.backgroundColor = UIColor.blue
-        return CustomControlData(text: "dadda", color: .darkGray)
+    func setData(data: CustomControlData) {
+        textLabel.backgroundColor = data.color
+        textLabel.text = data.text
+        
         
     }
     

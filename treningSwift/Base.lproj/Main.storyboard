@@ -128,7 +128,7 @@
                             <constraint firstItem="nEg-PI-0YD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tYv-gT-929"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="lnl-Q9-YtP"/>
+                    <tabBarItem key="tabBarItem" title="Item1" id="lnl-Q9-YtP"/>
                     <size key="freeformSize" width="390" height="1200"/>
                     <connections>
                         <outlet property="ActivityIndicatorView" destination="pr8-AZ-6cZ" id="BzL-rM-bFG"/>
@@ -148,17 +148,48 @@
         <scene sceneID="DIZ-Gr-DNf">
             <objects>
                 <viewController title="SecondViewController" id="zsU-Yc-BIr" customClass="SecondViewController" customModule="treningSwift" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4me-J0-Npw" customClass="CustomView" customModule="treningSwift">
+                    <view key="view" contentMode="scaleToFill" id="4me-J0-Npw">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5C-PG-sg5" customClass="CustomView" customModule="treningSwift">
+                                <rect key="frame" x="0.0" y="47" width="390" height="714"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0w5-bv-7TI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0w5-bv-7TI" firstAttribute="trailing" secondItem="H5C-PG-sg5" secondAttribute="trailing" id="99j-B6-Dht"/>
+                            <constraint firstItem="H5C-PG-sg5" firstAttribute="leading" secondItem="0w5-bv-7TI" secondAttribute="leading" id="E41-kF-fq7"/>
+                            <constraint firstItem="0w5-bv-7TI" firstAttribute="bottom" secondItem="H5C-PG-sg5" secondAttribute="bottom" id="q9g-Zi-AEn"/>
+                            <constraint firstItem="H5C-PG-sg5" firstAttribute="top" secondItem="0w5-bv-7TI" secondAttribute="top" id="sC6-Ct-R7t"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="FvV-fd-a9r"/>
+                    <connections>
+                        <outlet property="customView" destination="H5C-PG-sg5" id="YlO-Ri-gKc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wSx-js-FUi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2179" y="402"/>
+        </scene>
+        <!--Item3-->
+        <scene sceneID="MLO-vd-1jS">
+            <objects>
+                <viewController id="9Ep-Gq-SHx" customClass="ThirstViewController" customModule="treningSwift" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wP8-pb-njU">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fqX-ih-87S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item3" id="ddT-bi-bVz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cXT-w2-Ruv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2178" y="1104"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8HN-xY-MPj">
@@ -172,6 +203,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="M2n-pC-cqT"/>
                         <segue destination="zsU-Yc-BIr" kind="relationship" relationship="viewControllers" id="kiW-ZX-Dsg"/>
+                        <segue destination="9Ep-Gq-SHx" kind="relationship" relationship="viewControllers" id="reL-0o-IxA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6o-wE-Dam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
