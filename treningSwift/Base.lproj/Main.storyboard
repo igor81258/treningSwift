@@ -148,7 +148,7 @@
         <scene sceneID="DIZ-Gr-DNf">
             <objects>
                 <viewController title="SecondViewController" id="zsU-Yc-BIr" customClass="SecondViewController" customModule="treningSwift" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4me-J0-Npw">
+                    <view key="view" contentMode="scaleToFill" id="4me-J0-Npw" customClass="CustomView" customModule="treningSwift">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="0w5-bv-7TI"/>

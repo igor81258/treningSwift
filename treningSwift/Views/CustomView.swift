@@ -7,26 +7,36 @@
 
 import UIKit
 
-class CustomView: UIView {
-    private let textLabel = UILabel()
-    
+@IBDesignable class CustomView: UIView {
+    let textLabel = UILabel(frame: CGRect())
+  
     override init (frame: CGRect) {
         super.init(frame: frame)
         customConstrains()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    customConstrains()
     }
     
     func customConstrains(){
         addSubview(textLabel)
+        textLabel.text = "this is label"
         textLabel.translatesAutoresizingMaskIntoConstraints = false
+        textLabel.layer.cornerRadius = 50
         let horizontalLabelConstraint = NSLayoutConstraint(item: textLabel, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0)
         let verticalLabelConstraint = NSLayoutConstraint(item: textLabel, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)
         NSLayoutConstraint.activate([horizontalLabelConstraint,verticalLabelConstraint])
+    }
+    
+    func setData() -> CustomControlData?{
+        textLabel.backgroundColor = UIColor.blue
+        return CustomControlData(text: "dadda", color: .darkGray)
         
     }
+    
+}
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -36,4 +46,4 @@ class CustomView: UIView {
     }
     */
 
-}
+
