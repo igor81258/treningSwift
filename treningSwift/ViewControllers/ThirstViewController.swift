@@ -9,17 +9,22 @@ import UIKit
 
 class ThirstViewController: UIViewController {
 let prime = Finder()
-    let number = prime
-    start { [weak self] (number) in
+    var lastPrimeLabel = UILabel(frame: CGRect(x: 40, y: 40, width: 100, height: 10))
+    let num: () =  Finder().start { number in
+        print(number)
+    }
     
-    DispatchQueue.main.async { [weak self] in
-    self?.lastPrimeLabel = "\(number)"
-    }
-    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.addSubview(lastPrimeLabel)
+        prime.start { [weak self] (num) in
+            
+            DispatchQueue.main.async { [weak self] in
+                self?.lastPrimeLabel.text = "\(num)"
+            }
+            }
         // Do any additional setup after loading the view.
     }
     
