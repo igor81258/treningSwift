@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1539999028E5EA7200052B2C /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539998F28E5EA7200052B2C /* CustomView.swift */; };
-		1539999628ECEB4F00052B2C /* ThirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539999528ECEB4F00052B2C /* ThirstViewController.swift */; };
+		1539999628ECEB4F00052B2C /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1539999528ECEB4F00052B2C /* ThirdViewController.swift */; };
 		15AFED0E28E23EEA0022E4E7 /* RootTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AFED0D28E23EEA0022E4E7 /* RootTabController.swift */; };
 		15AFED1028E245CC0022E4E7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AFED0F28E245CC0022E4E7 /* SecondViewController.swift */; };
 		15AFED1428E2484A0022E4E7 /* CustomControlData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AFED1328E2484A0022E4E7 /* CustomControlData.swift */; };
@@ -23,7 +23,7 @@
 
 /* Begin PBXFileReference section */
 		1539998F28E5EA7200052B2C /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
-		1539999528ECEB4F00052B2C /* ThirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirstViewController.swift; sourceTree = "<group>"; };
+		1539999528ECEB4F00052B2C /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		15AFED0D28E23EEA0022E4E7 /* RootTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabController.swift; sourceTree = "<group>"; };
 		15AFED0F28E245CC0022E4E7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		15AFED1328E2484A0022E4E7 /* CustomControlData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControlData.swift; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 				15AFED0D28E23EEA0022E4E7 /* RootTabController.swift */,
 				15CAF74828DA1080008D8E2B /* FirstViewController.swift */,
 				15AFED0F28E245CC0022E4E7 /* SecondViewController.swift */,
-				1539999528ECEB4F00052B2C /* ThirstViewController.swift */,
+				1539999528ECEB4F00052B2C /* ThirdViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -202,7 +202,7 @@
 				15AFED1428E2484A0022E4E7 /* CustomControlData.swift in Sources */,
 				15AFED0E28E23EEA0022E4E7 /* RootTabController.swift in Sources */,
 				15CAF74528DA1080008D8E2B /* AppDelegate.swift in Sources */,
-				1539999628ECEB4F00052B2C /* ThirstViewController.swift in Sources */,
+				1539999628ECEB4F00052B2C /* ThirdViewController.swift in Sources */,
 				15AFED1028E245CC0022E4E7 /* SecondViewController.swift in Sources */,
 				15CAF74728DA1080008D8E2B /* SceneDelegate.swift in Sources */,
 			);
