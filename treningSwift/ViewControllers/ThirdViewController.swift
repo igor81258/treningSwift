@@ -14,26 +14,33 @@ class ThirdViewController: UIViewController {
     let stopButton = UIButton()
     let prime = Finder()
     let lastPrimeLabel = UILabel()
-    let num: () =  Finder().start { number in
-        print(number)
-    }
+    var changer = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         settingLastPrimeLabel()
         createStartButton()
         createStopButton()
-        startButton.addTarget(self, action: #selector(buttonStart), for: <#T##UIControl.Event#>)
+        startButton.addTarget(self, action: #selector(buttonStart), for: .touchUpInside)
+        stopButton.addTarget(self, action: #selector(buttonStop), for: .touchUpInside)
+            
+        }
+        
+    @objc func buttonStop(sender: UIButton)
+    {
+        changer = false
+    }
+    @objc func buttonStart (sender: UIButton){
+        changer = true
+        
         prime.start { [weak self] (num) in
+            if self?.changer == false {return}
             DispatchQueue.main.async { [weak self] in
                 self?.lastPrimeLabel.text = "\(num)"
             }
         }
-        
     }
-    @objc func buttonStart (sender: UIButton){
-        
-    }
+    
         func createStopButton(){
             
             view.addSubview(stopButton)
