@@ -32,16 +32,22 @@ class FirstNavigationController: UIViewController {
 }
 class SecondNavigationController: UIViewController{
     @IBOutlet var getLabel: UILabel!
-    
+    @IBOutlet var Alert: UIBarButtonItem!
+    @IBAction func AlertMessange(_ sender: Any) {
+        let AlertController = UIAlertController(title: "Warning", message: "This is AlertMessage", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default) { (action) in
+            return
+        }
+        AlertController.addAction(action)
+        self.present(AlertController, animated: true)
+    }
     var text1 = String()
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         getLabel.text = text1
-        
-        
     }
+    
+    
 }
 
 

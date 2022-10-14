@@ -175,7 +175,7 @@
             </objects>
             <point key="canvasLocation" x="1266" y="910"/>
         </scene>
-        <!--Second Navigation Controller-->
+        <!--Title-->
         <scene sceneID="qom-5S-Js1">
             <objects>
                 <viewController storyboardIdentifier="second" id="G3x-JR-cue" customClass="SecondNavigationController" customModule="treningSwift" customModuleProvider="target" sceneMemberID="viewController">
@@ -213,8 +213,15 @@
                             <constraint firstItem="yaz-Pk-sin" firstAttribute="top" secondItem="MyC-dZ-lCK" secondAttribute="top" id="whY-Iv-uKh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="lRY-YV-M3k"/>
+                    <navigationItem key="navigationItem" title="Title" id="Gui-Rv-pyz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7zJ-pu-8Fa">
+                            <connections>
+                                <action selector="AlertMessange:" destination="G3x-JR-cue" id="hKU-1m-e9s"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="Alert" destination="7zJ-pu-8Fa" id="K3s-53-vsf"/>
                         <outlet property="getLabel" destination="AAz-iE-4KX" id="gUa-f3-Pxs"/>
                     </connections>
                 </viewController>
@@ -274,7 +281,7 @@
             </objects>
             <point key="canvasLocation" x="1267" y="99"/>
         </scene>
-        <!--Others-->
+        <!--Title-->
         <scene sceneID="mbP-ct-VRn">
             <objects>
                 <viewController id="Ttp-dm-fhk" customClass="FirstNavigationController" customModule="treningSwift" customModuleProvider="target" sceneMemberID="viewController">
@@ -337,7 +344,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="others" id="OKK-8j-d5N"/>
-                    <navigationItem key="navigationItem" title="Others" id="ri7-qD-QBV"/>
+                    <navigationItem key="navigationItem" title="Title" id="txy-Ol-8qc"/>
                     <connections>
                         <outlet property="rootButton" destination="vVX-Fk-xZG" id="WTo-eg-Guy"/>
                         <outlet property="textField" destination="DQ2-GV-MsJ" id="XdP-6e-42k"/>
