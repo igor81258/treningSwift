@@ -15,6 +15,7 @@ class ThirdViewController: UIViewController {
     let prime = Finder()
     let lastPrimeLabel = UILabel()
     var changer = true
+    let CustomQueue = DispatchQueue.global(qos: .userInitiated)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,14 +30,16 @@ class ThirdViewController: UIViewController {
     @objc func buttonStop(sender: UIButton)
     {
         changer = false
+         
     }
     @objc func buttonStart (sender: UIButton){
-        changer = true
-        
-        prime.start { [weak self] (num) in
-            if self?.changer == false {return}
-            DispatchQueue.main.async { [weak self] in
-                self?.lastPrimeLabel.text = "\(num)"
+       
+        CustomQueue.sync { changer = true
+            prime.start { [weak self] (num) in
+                if self?.changer == false {return}
+                DispatchQueue.main.async { [weak self] in
+                    self?.lastPrimeLabel.text = "\(num)"
+                }
             }
         }
     }
