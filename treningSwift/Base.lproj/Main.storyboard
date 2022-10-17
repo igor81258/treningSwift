@@ -11,7 +11,7 @@
         <!--FirstViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="FirstViewController" id="BYZ-38-t0r" customClass="FirstViewController" customModule="treningSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="FirstViewController" wantsFullScreenLayout="YES" id="BYZ-38-t0r" customClass="FirstViewController" customModule="treningSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,6 +77,12 @@
                                                     <constraint firstAttribute="height" constant="242" id="XKk-Pt-fXW"/>
                                                 </constraints>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Portret" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEb-70-c1y">
+                                                <rect key="frame" x="168.66666666666666" y="253" width="52.666666666666657" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -86,6 +92,7 @@
                                             <constraint firstItem="wjq-gY-LIs" firstAttribute="leading" secondItem="enF-nS-t1J" secondAttribute="leading" constant="20" id="Ahj-6d-OXR"/>
                                             <constraint firstAttribute="trailing" secondItem="wdu-ZD-jj0" secondAttribute="trailing" constant="20" id="Asr-nQ-c61"/>
                                             <constraint firstItem="V7F-5b-XgO" firstAttribute="top" secondItem="Jw0-LR-2br" secondAttribute="bottom" constant="16" id="BzM-Pe-pJl"/>
+                                            <constraint firstItem="LEb-70-c1y" firstAttribute="centerX" secondItem="enF-nS-t1J" secondAttribute="centerX" id="GWu-Fm-6zA"/>
                                             <constraint firstItem="pr8-AZ-6cZ" firstAttribute="leading" secondItem="V7F-5b-XgO" secondAttribute="trailing" constant="281" id="HVA-Kk-huW"/>
                                             <constraint firstAttribute="trailing" secondItem="Jw0-LR-2br" secondAttribute="trailing" constant="16" id="MNF-ss-5IO"/>
                                             <constraint firstAttribute="trailing" secondItem="Wtt-yL-cqH" secondAttribute="trailing" constant="20" id="NBA-YY-KZQ"/>
@@ -95,6 +102,7 @@
                                             <constraint firstAttribute="height" constant="1200" id="VTe-yV-qpg"/>
                                             <constraint firstItem="Jw0-LR-2br" firstAttribute="leading" secondItem="enF-nS-t1J" secondAttribute="leading" constant="16" id="WdY-SW-ezS"/>
                                             <constraint firstItem="pr8-AZ-6cZ" firstAttribute="top" secondItem="Jw0-LR-2br" secondAttribute="bottom" constant="16" id="X1F-vS-nrX"/>
+                                            <constraint firstItem="LEb-70-c1y" firstAttribute="top" secondItem="Jw0-LR-2br" secondAttribute="bottom" constant="20.666666666666686" id="aUR-QH-vmY"/>
                                             <constraint firstAttribute="trailing" secondItem="tLu-GM-K0D" secondAttribute="trailing" constant="16" id="alN-6q-wnE"/>
                                             <constraint firstAttribute="trailing" secondItem="V7F-5b-XgO" secondAttribute="trailing" constant="321" id="b5M-Kn-VOM"/>
                                             <constraint firstItem="wdu-ZD-jj0" firstAttribute="top" secondItem="enF-nS-t1J" secondAttribute="top" constant="20" id="clh-zh-Qag"/>
@@ -138,11 +146,12 @@
                         <outlet property="SlideForChangeProgreess" destination="tLu-GM-K0D" id="LSb-Jp-55G"/>
                         <outlet property="SwitchAnimating" destination="V7F-5b-XgO" id="9E4-9P-YF7"/>
                         <outlet property="changeTexrField" destination="wjq-gY-LIs" id="iyd-vG-HVn"/>
+                        <outlet property="labelOrientation" destination="LEb-70-c1y" id="cm9-dt-mDz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="517" y="1036"/>
+            <point key="canvasLocation" x="516.92307692307691" y="1035.7819905213269"/>
         </scene>
         <!--SecondViewController-->
         <scene sceneID="DIZ-Gr-DNf">
