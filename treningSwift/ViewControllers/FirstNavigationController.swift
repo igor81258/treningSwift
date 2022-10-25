@@ -10,6 +10,7 @@ import UIKit
 class FirstNavigationController: UIViewController {
     
     
+    @IBOutlet var newsButton: UIButton!
     @IBOutlet var textField: UITextField!
     @IBOutlet var rootButton: UIButton!
     @IBAction func rootButton(_ sender: UIButton) {
@@ -17,12 +18,7 @@ class FirstNavigationController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
         vc.text1 = textField.text!
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destViewController : SecondNavigationController = segue.destination as! SecondNavigationController
-        destViewController.text1 = (textField.text)!
-    }
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

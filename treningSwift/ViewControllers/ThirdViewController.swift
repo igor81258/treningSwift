@@ -33,11 +33,11 @@ class ThirdViewController: UIViewController {
          
     }
     @objc func buttonStart (sender: UIButton){
-       
-        CustomQueue.sync { changer = true
+       changer = true
+        CustomQueue.sync {
             prime.start { [weak self] (num) in
                 if self?.changer == false {return}
-                DispatchQueue.main.async { [weak self] in
+                DispatchQueue.main.sync { [weak self] in
                     self?.lastPrimeLabel.text = "\(num)"
                 }
             }

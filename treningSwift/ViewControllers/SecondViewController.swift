@@ -6,7 +6,25 @@
 //
 
 import UIKit
+struct AppUtility {
 
+    static func lockOrientation(_ orientation: UIInterfaceOrientationMask) {
+    
+        if let delegate = UIApplication.shared.delegate as? AppDelegate {
+            delegate.orientationLock = orientation
+        }
+    }
+
+    /// OPTIONAL Added method to adjust lock and rotate to the desired orientation
+    static func lockOrientation(_ orientation: UIInterfaceOrientationMask, andRotateTo rotateOrientation:UIInterfaceOrientation) {
+   
+        self.lockOrientation(orientation)
+    
+        UIDevice.current.setValue(rotateOrientation.rawValue, forKey: "orientation")
+        UINavigationController.attemptRotationToDeviceOrientation()
+    }
+
+}
 class SecondViewController: UIViewController {
     @IBOutlet var customView: CustomView!
     private let manager = CustomDataManager()
@@ -17,16 +35,20 @@ class SecondViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        AppUtility.lockOrientation(.portrait)
+        // Or to rotate and lock
+        // AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
+        
     }
-    */
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Don't forget to reset when view is being removed
+        AppUtility.lockOrientation(.all)
+    }
 
 }
