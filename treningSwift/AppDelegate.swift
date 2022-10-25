@@ -9,38 +9,47 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-    func findSimpleNumber(goal: Int) -> [Int]
-    {
-         // лимит поиска
-        var count = 2
-        var primeNumber = [Int]()  // массив для записи
-        var set = 0
-
-        while count < goal {
-            for i in primeNumber{
-                if ((count % i) == 0) {
-                    set = 1
-                }
-            }
-            if set == 0 {
-                primeNumber.append(count)
-                count += 1
-                set = 0
-            } else {
-                count += 1
-                set = 0
-            }
-        }
-        print(primeNumber )
-        return primeNumber
-    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        findSimpleNumber(goal: 100)
+        
         // Override point for customization after application launch.
         return true
     }
+    var orientationLock = UIInterfaceOrientationMask.all
 
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+            return self.orientationLock
+    }
 }
-
+class Finder{
+    
+    var stop = false
+    
+    func primeNumber(number : Int) -> Bool{
+        guard number >= 2 else {return false}
+        for i in 2 ..< number{
+            if number % i == 0
+            {
+                return false
+            }
+        }
+        return true
+    }
+    
+    func start(primeFound: @escaping ((_ number: Int) -> Void)) {
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            var i = 2
+            while !self.stop {
+                if self.primeNumber(number: i) {
+                    primeFound(i)
+                }
+                i += 1
+            }
+        }
+    }
+}

@@ -7,12 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FirstViewController: UIViewController {
     @IBOutlet weak var Label: UILabel!
     @IBOutlet weak var ChangeButton: UIButton!
     @IBOutlet weak var changeTexrField: UITextField!
     @IBOutlet weak var SlideForChangeProgreess: UISlider!
     @IBOutlet weak var ChangedProgress: UIProgressView!
+    @IBOutlet var labelOrientation: UILabel!
     @IBOutlet var SwitchAnimating: UISwitch!
     
     @IBOutlet var ActivityIndicatorView: UIActivityIndicatorView!
@@ -43,9 +44,16 @@ class ViewController: UIViewController {
         {
             ActivityIndicatorView.stopAnimating()
         }
+    }
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        
+        if UIDevice.current.orientation.isLandscape {
+            labelOrientation.text = "Landscape"
+        } else {
+            labelOrientation.text = "Portret"
+        }
+       
             
-        
-        
     }
 }
 
