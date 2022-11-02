@@ -8,8 +8,19 @@
 import UIKit
 
 class ArticleTableViewCell: UITableViewCell {
+    var item: Arctileitem? {
+        didSet {
+                configureCell()
+            }
+    }
+    func configureCell(){
+        guard let item = item else {return}
+        labelTitle.text = item.title
+        labelDetails.text = item.details
+        ImageCell.image = item.image
+    }
     @IBOutlet var labelTitle: UILabel!
-    @IBOutlet var lableDetails: UILabel!
+    @IBOutlet var labelDetails: UILabel!
     @IBOutlet var ImageCell: UIImageView!
     
     override func awakeFromNib() {

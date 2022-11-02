@@ -12,4 +12,5 @@ struct Arctileitem{
     let title : String
     let details : String
     
-}
+    }
+

@@ -8,10 +8,18 @@
 import UIKit
 
 class DetailNewsList: UIViewController {
-
+    var item: Arctileitem?
+    @IBOutlet var titleNews: UILabel!
+    @IBOutlet var textNews: UITextView!
+    @IBOutlet var imageNews: UIImageView!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        guard let item = item else {return}
+        titleNews.text = item.title
+        textNews.text = item.details
+        imageNews.image = item.image
+        
         // Do any additional setup after loading the view.
     }
     
