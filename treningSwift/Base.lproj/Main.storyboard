@@ -273,11 +273,13 @@
         <scene sceneID="8HN-xY-MPj">
             <objects>
                 <tabBarController id="5Iu-T8-F4t" customClass="RootTabController" customModule="treningSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="Etl-C2-KHg"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FZJ-Gm-9cr">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.27416090469999999" green="0.69996358680000004" blue="0.96611279250000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="M2n-pC-cqT"/>
@@ -515,7 +517,9 @@
                             <constraint firstItem="ez8-vf-Xpo" firstAttribute="leading" secondItem="Ndx-D8-r3g" secondAttribute="leading" constant="8" id="nHx-zc-zDI"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="others" id="OKK-8j-d5N"/>
+                    <tabBarItem key="tabBarItem" title="other" id="OKK-8j-d5N">
+                        <color key="badgeColor" systemColor="linkColor"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Title" id="txy-Ol-8qc"/>
                     <connections>
                         <outlet property="rootButton" destination="vVX-Fk-xZG" id="WTo-eg-Guy"/>
@@ -526,12 +530,11 @@
             </objects>
             <point key="canvasLocation" x="3227.6923076923076" y="1605.9241706161138"/>
         </scene>
-        <!--Others-->
+        <!--others-->
         <scene sceneID="UOG-vf-gI0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9FV-PB-Fx1" sceneMemberID="viewController">
-                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <tabBarItem key="tabBarItem" title="Others" id="RbN-OI-vBN"/>
+                    <tabBarItem key="tabBarItem" title="others" id="RbN-OI-vBN"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="sCF-Wq-L8I"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kmd-60-glL">
@@ -555,6 +558,9 @@
         <image name="bmwM" width="1680" height="756"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

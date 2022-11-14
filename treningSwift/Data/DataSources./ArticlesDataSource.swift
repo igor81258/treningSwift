@@ -13,7 +13,7 @@ class ArticlesDataSource: NSObject, UITableViewDataSource, UITableViewDelegate{
     var array = [Arctileitem]()
     override init() {
         super.init()
-        array = [getItem(), getItem(),getItem()]
+        array = [getItem(), getItem(),getItem(),getItem(),getItem()]
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return array.count
