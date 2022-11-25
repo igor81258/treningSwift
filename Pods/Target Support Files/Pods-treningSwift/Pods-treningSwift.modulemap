@@ -1,0 +1,6 @@
+framework module Pods_treningSwift {
+  umbrella header "Pods-treningSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

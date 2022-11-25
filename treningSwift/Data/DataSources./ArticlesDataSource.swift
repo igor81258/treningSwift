@@ -11,6 +11,7 @@ class ArticlesDataSource: NSObject, UITableViewDataSource, UITableViewDelegate{
     let idCell = "myCell"
     var delegate: TableDelegate?
     var array = [Arctileitem]()
+    
     override init() {
         super.init()
         array = [getItem(), getItem(),getItem(),getItem(),getItem()]
